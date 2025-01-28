@@ -1,8 +1,11 @@
 package com.example.fresh_calculate_zakaz
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.example.fresh_calculate_zakaz.databinding.ActivityMainBinding
 
@@ -15,33 +18,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val usageClicker = findViewById<Button>(R.id.buttontousage)
+        usageClicker.setOnClickListener{
+            val displayIntentUsePerWeak = Intent(this,UsePerWeak::class.java)
+            startActivity(displayIntentUsePerWeak)
 
-        // Инициализация SharedPreferences
-        sharedPref = getSharedPreferences("Мелкий", MODE_PRIVATE)
-
-        // Обработчик для кнопки Calculate
-        binding.buttonCalculate.setOnClickListener {
-            saveValueToSharedPrefs()
         }
+        val calcClicker = findViewById<Button>(R.id.buttontocalculate)
+        calcClicker.setOnClickListener{
+            val displayIntentCalculate = Intent(this,Calculate::class.java)
+            startActivity(displayIntentCalculate)
 
-        // Обработчик для кнопки Result
-        binding.buttonResult.setOnClickListener {
-            showSavedValue()
         }
-    }
-
-    // Функция для сохранения значения в SharedPreferences
-    private fun saveValueToSharedPrefs() {
-        val value = binding.inputValue1.text.toString().toIntOrNull() ?: return
-        with(sharedPref.edit()) {
-            putInt("Мелкий", value)
-            apply()
-        }
-    }
-
-    // Функция для показа сохраненного значения
-    private fun showSavedValue() {
-        val savedValue = sharedPref.getInt("Мелкий", 0)
-        Toast.makeText(this, savedValue.toString(), Toast.LENGTH_SHORT).show()
     }
 }

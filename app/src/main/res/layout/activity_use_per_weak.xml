@@ -19,9 +19,97 @@
     tools:layout_editor_absoluteX="16dp"
     tools:layout_editor_absoluteY="16dp"
     tools:ignore="MissingConstraints"
-    android:layout_gravity="center_horizontal"/>
+    android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
 
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ПН"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ВТ"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="СР"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ЧТ"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ПТ"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="СБ"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ВС"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +130,9 @@
 
 
         <EditText
-            android:id="@+id/мелкийПН"
+            android:inputType="number"
+            android:maxLength="3"
+            android:id="@+id/smallSalMon"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,11 +142,14 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:imeOptions="actionNext"/>
 
         <EditText
-            android:id="@+id/мелкийВТ"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalTue"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,8 +161,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/мелкийСР"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalWed"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -81,8 +176,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/мелкийЧТ"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalThu"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -94,8 +191,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/мелкийПТ"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalFri"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,8 +206,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/мелкийСБ"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalSat"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -120,8 +221,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/мелкийВС"
-
+            android:imeOptions="actionNext"
+            android:id="@+id/smallSalSun"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -156,7 +259,10 @@
 
 
         <EditText
-
+            android:imeOptions="actionNext"
+            android:id="@+id/BS1"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -168,6 +274,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS2"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -180,6 +290,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS3"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -192,6 +306,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS4"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -204,6 +322,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS5"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -216,6 +338,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -228,6 +354,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/BS7"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -263,7 +393,11 @@
 
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O1"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -275,7 +409,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O2"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -287,7 +425,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O3"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -299,6 +441,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O4"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -311,6 +457,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O5"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -323,6 +473,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -335,6 +489,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/O7"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -369,7 +527,10 @@
 
 
         <EditText
-
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch1"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -381,7 +542,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch2"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -393,6 +558,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch3"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -405,6 +574,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch4"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -417,6 +590,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch5"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -429,6 +606,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -441,7 +622,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ch7"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -475,7 +660,11 @@
 
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom1"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -487,6 +676,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom2"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -499,6 +692,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom3"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -511,6 +708,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom4"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -523,6 +724,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom5"
+
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -535,6 +741,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -547,7 +757,11 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Tom7"
 
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -581,7 +795,10 @@
 
 
         <EditText
-
+            android:imeOptions="actionNext"
+            android:id="@+id/Car1"
+            android:inputType="number"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -593,6 +810,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Car2"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -605,6 +826,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Car3"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -618,6 +843,11 @@
 
         <EditText
 
+            android:imeOptions="actionNext"
+            android:id="@+id/Car4"
+            android:inputType="number"
+            android:maxLength="3"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -629,6 +859,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Car5"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -641,6 +875,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Car6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -653,6 +891,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Car7"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -687,6 +929,10 @@
 
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap1"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -699,6 +945,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap2"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -711,6 +961,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap3"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -723,6 +977,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap4"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -735,6 +993,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap5"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -747,6 +1009,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap6"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -759,6 +1025,10 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/Ap7"
+            android:inputType="number"
+            android:maxLength="3"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

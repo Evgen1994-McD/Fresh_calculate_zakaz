@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Fresh_calculate_zakaz"
         tools:targetApi="34">
         <activity
-            android:name=".MainActivity2"
+            android:name=".Calculate"
             android:exported="false" />
         <activity
-            android:name=".Use_per_weak"
+            android:name=".UsePerWeak"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
